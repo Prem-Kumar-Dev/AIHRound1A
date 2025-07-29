@@ -281,7 +281,7 @@ def extract_headings(pages):
                         headings.append({
                             "level": level,
                             "text": clean_text,
-                            "page": page_num + 1
+                            "page": page_num
                         })
     
     # Remove duplicates and sort by page
