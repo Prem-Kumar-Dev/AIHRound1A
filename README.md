@@ -65,7 +65,7 @@ copy "your-document.pdf" input\
 
 We will build the docker image using the following command:
 ```
-docker build --platform linux/amd64 -t adobe-hackathon:v1a
+docker build --platform linux/amd64 -t adobe-hackathon:v1a .
 ```
 
 After building the image, we will run the solution using the run command specified in the submitted instructions.
