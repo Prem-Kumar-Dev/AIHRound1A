@@ -70,7 +70,7 @@ docker build --platform linux/amd64 -t adobe-hackathon:v1a .
 
 After building the image, we will run the solution using the run command specified in the submitted instructions.
 ```
-docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" --network none adobe-hackathon:v1a
+docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none adobe-hackathon:v1a
 ```
 
 ```powershell
@@ -114,12 +114,12 @@ copy "sample.pdf" input\
 
 We will build the docker image using the following command:
 ```
-docker build --platform linux/amd64 -t adobe-hackathon:v1a
+docker build --platform linux/amd64 -t adobe-hackathon:v1a .
 ```
 
 After building the image, we will run the solution using the run command specified in the submitted instructions.
 ```
-docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none adobe-hackathon:v1a
+docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" --network none adobe-hackathon:v1a
 ```
 
 ```powershell
@@ -136,7 +136,7 @@ Get-Content output\sample.json
 #### Build Command
 
 ```
-docker build --platform linux/amd64 -t adobe-hackathon:v1a
+docker build --platform linux/amd64 -t adobe-hackathon:v1a .
 ```
 
 #### Run Command
